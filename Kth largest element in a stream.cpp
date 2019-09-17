@@ -30,23 +30,28 @@ int main()
    cin>>a[i];
   }
   priority_queue<ll,vector<ll>,greater<ll>>pq;
-  for(ll i=0;i<n;i++)
+  vector<ll>ans;
+  for(ll i=0;i<k-1;i++)
   {
-    if(k>i+1)
-    {
-     pq.push(a[i]);
-     cout<<"-1"<<" ";
-    }
-    else
-    {
     pq.push(a[i]);
-    ll zz=pq.top();
-    pq.pop();
-    cout<<zz<<" ";
+    ans.pb(-1);
+  }
+  pq.push(a[k-1]);
+  ans.pb(pq.top());
+  for(ll i=k;i<n;i++)
+  {
+    if(a[i]>pq.top())
+    {
+     pq.pop();
+     pq.push(a[i]);
     }
- }
-
- cout<<"\n";
+    ans.pb(pq.top());
+  }
+  f(n)
+  {
+    cout<<ans[i]<<" ";
+  }
+  cout<<"\n";
 }
  return 0;
 }
