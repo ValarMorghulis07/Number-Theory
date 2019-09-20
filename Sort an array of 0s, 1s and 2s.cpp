@@ -25,7 +25,7 @@ void sortit(ll a[],ll n)
   else if(a[mid]==1)
     mid++;
   else
-    swap(a[mid++],a[high--]);
+    swap(a[mid],a[high--]);
  }
 }
 
