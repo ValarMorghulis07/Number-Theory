@@ -15,6 +15,8 @@ typedef long long int ll;
 ll HRX=1e18;
 ll INF=1e9+7;
 
+
+//gfg
 int _stack :: getMin()
 {
   if(s.empty())
@@ -55,3 +57,24 @@ void _stack::push(int x)
   else
     s.push(x);
 }
+
+//Leetcode
+stack<pair<int,int>>st;//(val,min)
+    MinStack(){
+     }
+    
+    void push(int x){
+      st.push({x,!st.empty() ? min(x,st.top().second) : x});
+    }
+    
+    
+    void pop() {
+     return  st.pop();
+     }
+    int top() {
+      return st.top().first;
+    }
+    
+    int getMin(){
+      return st.top().second;
+    }
