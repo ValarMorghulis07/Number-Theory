@@ -59,6 +59,7 @@ void _stack::push(int x)
 }
 
 //Leetcode
+//Methods pop, top and getMin operations will always be called on non-empty stacks.
 stack<pair<int,int>>st;//(val,min)
     MinStack(){
      }
