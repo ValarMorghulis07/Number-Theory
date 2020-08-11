@@ -40,11 +40,10 @@ int main()
   ans.pb(pq.top());
   for(ll i=k;i<n;i++)
   {
-    if(a[i]>pq.top())
-    {
+    pq.push(a[i]);
+    if(pq.size()>k)
      pq.pop();
-     pq.push(a[i]);
-    }
+     
     ans.pb(pq.top());
   }
   f(n)
